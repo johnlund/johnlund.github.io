@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<game>
+	<bodypart type="legs">
+		<scenario id="1">
+			<scenDesc>Earth is so crowded there's no room for cars.</scenDesc>
+			<option id="1">
+				<opDesc>Long muscular legs</opDesc>
+				<explanation>You can sprint tirelessly for miles and miles to get where you're going.</explanation>
+			</option>
+			<option id="2">
+				<opDesc>Kangaroo-like legs</opDesc>
+				<explanation>Hop to it! You can cover a lot of ground quickly.</explanation>
+			</option>
+		</scenario>
+	</bodypart>
+	
+	<bodypart type="body">
+		<scenario id="1">
+			<scenDesc>Humans build underground cities to escape global warming, but boy, are they crowded.</scenDesc>
+			<option id="1">
+				<opDesc>Short body</opDesc>
+				<explanation>Moving around in tight places is no problem for you.</explanation>
+			</option>
+			<option id="2">
+				<opDesc>Curved spine</opDesc>
+				<explanation>Your back aches, but at least you don't bump your head.</explanation>
+			</option>
+		</scenario>
+	</bodypart>
+	
+	<bodypart type="arms">
+		<scenario id="1">
+			<scenDesc>Humans populate a large planet where gravity makes everything very heavy.</scenDesc>
+			<option id="1">
+				<opDesc>Muscular arms, hands, and fingers</opDesc>
+				<explanation>You can lift objects that weigh more than you do!</explanation>
+			</option>
+			<option id="2">
+				<opDesc>Bucket-like hands with claws</opDesc>
+				<explanation>You just scoop up heavy objects like they're candy.</explanation>
+			</option>
+		</scenario>
+	</bodypart>
+	
+	<bodypart type="head">
+		<scenario id="1">
+			<scenDesc>After years of living and traveling in space, humans sip all their food from small containers.</scenDesc>
+			<option id="1">
+				<opDesc>Tiny jaws with few teeth</opDesc>
+				<explanation>With no need to chew, your jaws and teeth have shrunk.</explanation>
+			</option>
+			<option id="2">
+				<opDesc>Lips shaped like straws</opDesc>
+				<explanation>Slurp! Your lips can suck food right out of its container.</explanation>
+			</option>
+		</scenario>
+	</bodypart>
+</game>

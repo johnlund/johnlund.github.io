@@ -1,0 +1,15 @@
+<map>
+	<interactive id="default">Roll Over the Map to Find Activities</interactive>
+	<interactive id="site_name1">A</interactive>
+	<interactive id="site_name2">B</interactive>
+	<interactive id="site_name3">C</interactive>
+	<interactive id="site_name4">D</interactive>
+	<interactive id="taxi1">Boat Taxi Stop 1</interactive>
+	<interactive id="taxi2">Boat Taxi Stop 2</interactive>
+	<interactive id="taxi3">Boat Taxi Stop 3</interactive>
+	<interactive id="taxi4">Boat Taxi Stop 4</interactive>
+	<interactive id="bocce">Bocce Ball Courts</interactive>
+	<interactive id="rcboat">RC Boat Racing</interactive>
+	<interactive id="sailing">Sailboat</interactive>
+	<interactive id="welcomec">Welcome Center</interactive>
+</map>

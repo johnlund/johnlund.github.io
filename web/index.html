@@ -1,0 +1,409 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>John Lund</title>
+<link rel="icon" href="icon.png" type="image/png" />
+<script type="text/javascript" src="js/jquery-1.4.4.min.js"></script>
+<script type="text/javascript" src="js/jquery.tools.min.js"></script>
+<script type="text/javascript" src="js/css_browser_selector.js"></script>
+<base target="_blank" />
+<script type="text/javascript">
+//<!--
+if (document.images)
+{
+	preload_image_object = new Image();
+	// set image url
+	image_url = new Array();
+	image_url[0] = "images/breasttest.jpg";
+	image_url[1] = "images/brycepinkos.jpg";
+	image_url[2] = "images/creative.jpg";
+	image_url[3] = "images/fishbone.jpg";
+	image_url[4] = "images/immortals.jpg";
+	image_url[5] = "images/istudios.jpg";
+	image_url[6] = "images/makol.jpg";
+	image_url[7] = "images/map.jpg";
+	image_url[8] = "images/movember.jpg";
+	image_url[9] = "images/owyeung.jpg";
+	image_url[10] = "images/smallgods.jpg";
+	image_url[11] = "images/svcf.jpg";
+	image_url[12] = "images/thehackysack.jpg";
+	image_url[13] = "images/bestfishtaco.jpg";
+	image_url[14] = "images/bluemarble.jpg";
+	image_url[15] = "images/monson.jpg";
+	image_url[16] = "images/knowmad.jpg";
+	image_url[17] = "images/space.jpg";
+	image_url[18] = "images/lindaheart.jpg";
+	image_url[19] = "images/macrosystems.jpg";
+
+	var i = 0;
+	for(i=0; i<=19; i++) 
+		preload_image_object.src = image_url[i];
+}
+
+$(document).ready(function(){
+	document.getElementById("frame").src = "contact.html";
+
+	$(window).resize(function(){
+		//$('#view').css('height', $('body').css('height'));
+	});
+
+	$("h4").click(function(e){
+		var target = "#"+"div_"+(e.target.id);
+		
+		if($(target).css("display") == "inline"){
+			$(target).css("display","none");
+			e.target.innerHTML = (e.target.id)+" >>";
+		}
+		else{
+			$(target).css("display","inline");
+			e.target.innerHTML = (e.target.id)+" <<";
+		}
+	});
+	$("h3").click(function(e){
+		e.preventDefault();
+		document.getElementById("frame").src = "contact.html";
+	});
+	$("a").click(function(e){
+		e.preventDefault();
+		document.getElementById("frame").src = e.target.href;
+		hidePanel();
+	});
+	// initialize tooltip
+	$(".tip").tooltip({
+
+		// tweak the position
+		offset: [0, 10],
+		position: "bottom right"
+	});
+
+	$('#Websites').trigger('click');
+	$('#CMS-Based_Websites').trigger('click');
+	$('#Flash-Based_Websites').trigger('click');
+	$('#Flash_Stand-Alones').trigger('click');
+	$('#Flash_User-Interfaces').trigger('click');
+	$('#Closed_Projects').trigger('click');
+		
+	/***********************************\
+	*************************************
+
+		  Right Panel Sliding
+		  
+	*************************************
+	\***********************************/
+
+	var panel_visible = 1;
+
+	showPanel();
+
+	$('#nav_tab').click(function() {
+		switch(panel_visible) {
+			case 1:
+				hidePanel();
+				return false;
+			case 0:
+				showPanel();
+				return false;
+		}
+	});
+
+	function hidePanel() {
+		$('#nav_container').animate({ 'left': '-375' }, 500);
+		$('#nav_tab_arrow').css("background", "url('images/arrow_right.png') no-repeat center");
+		panel_visible = 0;
+	}
+
+	function showPanel() {
+		$('#nav_container').animate({ 'left': '0' }, 500);
+		$('#nav_tab_arrow').css("background", "url('images/arrow_left.png') no-repeat center");
+		panel_visible = 1;
+	}
+});
+ //-->
+</script>
+<!--[if IE 7]>
+<style type="text/css">
+	#nav_bg_middle {
+		border-bottom:0px !important;
+	}
+</style>
+<![endif]-->
+<!--[if IE 6]>
+<style type="text/css">
+	#nav_bg_middle {
+		border-bottom:0px !important;
+	}
+</style>
+<![endif]-->
+<style type="text/css">
+* {
+	font-family:"Trebuchet MS", Helvetica, sans-serif;
+	margin:0;
+	padding:0;
+}
+p {
+	font-size:10px;
+}
+h3, h4 {
+	padding:10px;
+	cursor:pointer;
+}
+a {
+	padding-left:20px;
+}
+html, body {
+	height:100%;
+	width:100%;
+}
+#container {
+	min-height:975px;
+	min-width:1024px;
+	height:100%;
+	width:100%;
+}
+#main {
+	overflow:auto;
+	height:100%;
+	width:100%;
+}
+#view {
+	height:100%;
+	width:100%;
+	position:absolute;
+	top:0px;
+	left:0px;
+}
+#frame {
+	width:100%;
+	height:100%;
+	min-height:950px;
+	z-index:-10;
+	overflow:hidden;
+}
+#footer {
+	position: relative;
+	margin-top: -20px; /* negative value of footer height */
+	height: 20px;
+	text-align:center;
+	clear:both;
+}
+#nav_frame {
+	min-width:1024px;
+	height:100%;
+}
+#nav_holder {
+	width:400px;
+	float:left;
+	height:100%;
+	overflow:hidden;
+}
+#nav_container {
+	position:absolute;
+	left:0px;
+	width:400px;
+	height:100%;
+	z-index:10;
+}
+#nav_bg_top {
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:375px;
+	height:300px;
+	background-color:#999999;
+	border-right:1px solid #9900FF;
+	opacity:0.80;
+	filter:alpha(opacity=80);
+	z-index:-1;
+}
+#nav_bg_middle {
+	position:absolute;
+	top:300px;
+	left:0px;
+	width:375px;
+	height:75px;
+	background-color:#999999;
+	border-bottom:1px solid #999999;
+	opacity:0.80;
+	filter:alpha(opacity=80);
+	z-index:-1;
+}
+/* Firefox */
+@-moz-document url-prefix()
+{
+	#nav_bg_middle {
+		border-bottom:0px !important;
+	}
+}
+
+.chrome #nav_bg_middle {
+	border-bottom:0px !important;
+}
+.safari #nav_bg_middle {
+	border-bottom:0px !important;
+}
+
+#nav_bg_bottom {
+	position:absolute;
+	top:375px;
+	left:0px;
+	width:375px;
+	height:600px;
+	background-color:#999999;
+	border-right:1px solid #9900FF;
+	opacity:0.80;
+	filter:alpha(opacity=80);
+	z-index:-1;
+}
+#nav_tab {
+	position:absolute;
+	top:300px;
+	right:-1px;
+	height:75px;
+	width:25px;
+	background-color:#999999;
+	border:1px solid #9900FF;
+	opacity:0.80;
+	filter:alpha(opacity=80);
+	border-left:0px;
+	z-index:10;
+	cursor:pointer;
+}
+#nav_tab_arrow {
+	height:75px;
+	width:100%;
+	background:url('images/arrow_right.png') no-repeat center;
+}
+
+/* tooltip styling */
+.tooltip {
+	display:none;
+	width:280px;
+	height:202px;
+	border:3px solid #000000;
+	z-index:100;
+}
+</style>
+</head>
+
+<body>
+<div id="container">
+	<div id="main">
+		<div id="nav_frame">
+			<div id="nav_holder">
+				<div id="nav_container">
+					<h3>John Lund</h3>
+					<h4 id="Websites">Websites >></h4>
+					<div class="links" id="div_Websites">
+						<a class="tip" href="http://space.intertain.org/">Solar System Simulator</a>
+							<img class="tooltip" src="images/space.jpg" alt="http://space.intertain.org/" />
+							<br />
+						<a class="tip" href="http://www.knowmadadventures.com/">Knowmad Adventures</a>
+							<img class="tooltip" src="images/knowmad.jpg" alt="http://www.knowmadadventures.com/" />
+							<br />
+						<a class="tip" href="http://www.brycepinkos.com/">Bryce Pinkos Photography</a>
+							<img class="tooltip" src="images/brycepinkos.jpg" alt="http://www.brycepinkos.com/" />
+							<br />
+						<a class="tip" href="http://movember.intertain.org/">Narducci's Movember</a>
+							<img class="tooltip" src="images/movember.jpg" alt="http://movember.intertain.org/" />
+							<br />
+						<a class="tip" href="http://www.creativejourney.us.com">Creative Journey</a>
+							<img class="tooltip" src="images/creative.jpg" alt="http://www.creativejourney.us.com" />
+							<br />
+						<a class="tip" href="http://www.owyeung.com">Ease Owyeung</a>
+							<img class="tooltip" src="images/owyeung.jpg" alt="http://www.owyeung.com" />
+							<br />
+						<a class="tip" href="archive/intertainstudios/">Intertain Studios</a>
+							<img class="tooltip" src="images/istudios.jpg" alt="http://www.intertainstudios.com" />
+							<br />
+					</div>
+					<h4 id="CMS-Based_Websites">CMS-Based_Websites >></h4>
+					<div class="links" id="div_CMS-Based_Websites" style="display:none">
+						<a class="tip" href="http://cals.arizona.edu/research/macrosystems/">Macrosystems</a> (Drupal)
+							<img class="tooltip" src="images/macrosystems.jpg" alt="http://cals.arizona.edu/research/macrosystems/" />
+							<br />						
+						<a class="tip" href="http://www.lostnomadmedia.com/">Lost Nomad Media</a> (Wordpress)
+							<img class="tooltip" src="images/lostnomad.jpg" alt="http://www.lostnomadmedia.com/" />
+							<br />
+						<a class="tip" href="http://www.lindaheart.com/">Linda Heart</a> (Wordpress)
+							<img class="tooltip" src="images/lindaheart.jpg" alt="http://www.lindaheart.com/" />
+							<br />
+						<a class="tip" href="http://cals.arizona.edu/research/monson/">Russell Monson</a> (Drupal)
+							<img class="tooltip" src="images/monson.jpg" alt="http://cals.arizona.edu/research/monson/" />
+							<br />
+						<a class="tip" href="http://www.bluemarblegameco.com">Blue Marble Game Company</a> (WordPress)
+							<img class="tooltip" src="images/bluemarble.jpg" alt="http://www.bluemarblegameco.com" />
+							<br />
+						<a class="tip" href="http://www.bestfishtacoinensenada.com">The Best Fish Taco in Ensenada</a> (WordPress)
+							<img class="tooltip" src="images/bestfishtaco.jpg" alt="http://www.bestfishtacoinensenada.com" />
+							<br />
+						<a class="tip" href="http://www.immortalsconnection.com">The Immortals Connection</a> (VBulletin)
+							<img class="tooltip" src="images/immortals.jpg" alt="http://www.immortalsconnection.com" />
+							<br />
+						<a class="tip" href="http://www.siliconvalleycancerfoundation.org">Silicon Valley Cancer Foundation</a> (Drupal)
+							<img class="tooltip" src="images/svcf.jpg" alt="http://www.siliconvalleycancerfoundation.org" />
+							<br />
+						<a class="tip" href="http://www.dialyn.com">Dialyn</a> (WordPress)
+							<img class="tooltip" src="images/dialyn.jpg" alt="http://www.dialyn.com" />
+							<br />
+					</div>
+					<h4 id="Flash-Based_Websites">Flash-Based_Websites >></h4>
+					<div class="links" id="div_Flash-Based_Websites">
+						<a class="tip" href="http://www.fishbonejames.com/">Fishbone James</a>
+							<img class="tooltip" src="images/fishbone.jpg" alt="http://www.fishbonejames.com/" />
+							<br />
+						<a class="tip" href="http://www.makolconsulting.com/">Makol Consulting</a>
+							<img class="tooltip" src="images/makol.jpg" alt="http://www.makolconsulting.com/" />
+							<br />
+					</div>
+					<h4 id="Flash_Stand-Alones">Flash_Stand-Alones >></h4>
+					<div class="links" id="div_Flash_Stand-Alones">
+						<a class="tip" href="swf/smallgods.swf">Small Gods</a>
+							<img class="tooltip" src="images/smallgods.jpg" alt="smallgods.swf" />
+							<br />
+						<a class="tip" href="swf/thehackysack.swf">The Hacky Sack</a>
+							<img class="tooltip" src="images/thehackysack.jpg" alt="thehackysack.swf" />
+							<br />
+						<a class="tip" href="http://www.breasttest.org/instructional.swf">Breast Test Instructional Video</a>
+							<img class="tooltip" src="images/breasttest.jpg" alt="http://www.breasttest.org/instructional.swf" />
+							<br />
+						<a class="tip" href="swf/FutureHuman.swf">Future Human Game - Prototype</a>
+							<img class="tooltip" src="images/futurehuman.jpg" alt="FutureHuman.swf" />
+							<br />
+					</div>
+					<h4 id="Flash_User-Interfaces">Flash_User-Interfaces >></h4>
+					<div class="links" id="div_Flash_User-Interfaces">
+						<a class="tip" href="swf/map.swf">Venezia - Map</a>
+							<img class="tooltip" src="images/map.jpg" alt="map.swf" />
+							<br />
+					</div>
+					<h4 id="Closed_Projects">Closed_Projects >></h4>
+					<div class="links" id="div_Closed_Projects">
+						<a href="http://www.terc.edu/work/1138.html">Martian Boneyards</a>
+							<br />
+						<a href="http://techcrunch.com/2011/02/04/star-me/">Star.me</a>
+							<br />
+					</div>
+					<div id="nav_bg_top">
+					</div>
+					<div id="nav_bg_middle">
+					</div>
+					<div id="nav_bg_bottom">
+					</div>
+					<div id="nav_tab">
+						<div id="nav_tab_arrow">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>	
+		<div id="view">
+			<iframe id="frame" frameborder="0" src="http://www.intertainstudios.com/experience/contact.html"></iframe>
+		</div>
+	</div>
+</div>
+<div id="footer">
+	<p>Copyright © 2010 John Lund. All rights reserved.</p>
+</div>
+</body>
+</html>

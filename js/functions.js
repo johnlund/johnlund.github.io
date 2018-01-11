@@ -1,5 +1,6 @@
 var numPages = 14;
 var inverted = false;
+var page = 'resume';
 
 if (document.images)
 {
@@ -20,19 +21,28 @@ $.ajaxSetup({
 
 $(document).ready(function() {
 	$('#logo').mouseenter(function(e){
-		$(e.target).css('background-image','url("images/logo_inv.png")');
+		$(e.target).attr('src','images/logo_inv.png');
 		$('body').css('background-color','#000000');
 	});
 	$('#logo').mouseleave(function(e){
-		$(e.target).css('background','none');
+		$(e.target).attr('src','images/logo.png');
 		$('body').css('background-color','#FFFFFF');
-		$('#container').load('home.html', function() {
-			createIdeas();
-			if (window.location.hash) {
-				var hash = window.location.hash.replace(/^.*#/, '');
-				$('#content').load('content'+hash+'.html');
-			}
-		});
+		if (page == 'resume') {
+			page = 'ideas';
+			$('#container').load('home.html', function() {
+				createIdeas();
+				if (window.location.hash) {
+					var hash = window.location.hash.replace(/^.*#/, '');
+					$('#content').load('content'+hash+'.html');
+				}
+			});
+		}
+		else {
+			page = 'resume';
+			$('#container').load('resume.html', function() {
+				
+			});
+		}
 	});
 });
 

@@ -25,7 +25,16 @@ body {
 
 .portfolioItem {
 	width:200px;
-	margin:0 15px;
+	margin:15px;
+}
+
+.portfolioItem img {
+	width:100%;
+	border:solid black 2px;
+}
+
+.portfolioItem img:hover {
+	border:solid white 2px;
 }
 
 #container {

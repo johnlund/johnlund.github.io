@@ -39,7 +39,7 @@ $(document).ready(function() {
 		}
 		else {
 			page = 'resume';
-			$('#container').load('resume.html', function() {
+			$('#container').load('index.html', function() {
 				
 			});
 		}

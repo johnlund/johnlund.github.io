@@ -19,6 +19,15 @@ body {
 	cursor:pointer;
 }
 
+#portfolio {
+	width:700px;
+}
+
+.portfolioItem {
+	width:200px;
+	margin:0 15px;
+}
+
 #container {
 	width:700px;
 	margin:15px auto;

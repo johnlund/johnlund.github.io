@@ -21,11 +21,13 @@ body {
 
 #portfolio {
 	width:700px;
+	margin:0 auto;
 }
 
 .portfolioItem {
 	width:200px;
 	margin:15px;
+	display: inline-block;
 }
 
 .portfolioItem img {
